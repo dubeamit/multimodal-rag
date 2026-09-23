@@ -4,6 +4,7 @@
 
 # Large Media Files & Uploads
 *.mp4
+!Multimodal_demo.mp4
 *.webm
 *.mkv
 *.avi

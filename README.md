@@ -12,6 +12,16 @@ The system provides precise, interactive citations: clicking a citation badge in
 
 ---
 
+## 🎥 Live Demo
+
+Watch the complete multimodal pipeline in action — uploading a document, ingesting video, transcribing speech with millisecond timestamps, balanced ChromaDB retrieval, and interactive citations that seek the video player to the exact second:
+
+https://github.com/dubeamit/Mulitmodal_poc/assets/Multimodal_demo.mp4
+
+> 💡 **Demo Recording**: [`Multimodal_demo.mp4`](Multimodal_demo.mp4) (Direct download / preview)
+
+---
+
 ## 🚀 Key Highlights & Capabilities
 
 - 🎬 **Video Understanding with Timestamp Citations**:
@@ -40,49 +50,11 @@ The system provides precise, interactive citations: clicking a citation badge in
 
 ## 🏛️ Architecture Overview
 
-```mermaid
-flowchart TD
-    subgraph Client ["Frontend (Next.js 16 + React 19)"]
-        UI[Split-Screen Workspace]
-        VideoPlayer[HTML5 Video Player]
-        PdfView[Client PDF Canvas Viewer]
-        Chat[Chat Interface & Citations]
-    end
+The system combines a reactive Next.js 16 split-pane interface with an asynchronous FastAPI backend orchestrating whisper.cpp and ChromaDB:
 
-    subgraph Backend ["Backend API (FastAPI)"]
-        UploadAPI["/upload Endpoint"]
-        QueryAPI["/query Endpoint"]
-        STT["STT Pipeline (whisper.cpp + ffmpeg)"]
-        PDFExtract["PDF Text & Page Extractor"]
-        RAGEngine["Balanced RAG Retrieval Engine"]
-    end
-
-    subgraph Storage ["Vector & Embedding Layer"]
-        Chroma[("ChromaDB Vector Store")]
-        EmbedModel["SentenceTransformers (all-MiniLM-L6-v2)"]
-    end
-
-    subgraph LLMs ["Inference Providers"]
-        LocalLLM["Local LLM (llama.cpp / Ollama)"]
-        GeminiAPI["Google Gemini API"]
-    end
-
-    UI --> UploadAPI
-    UI --> QueryAPI
-    UploadAPI -->|Video| STT
-    UploadAPI -->|PDF| PDFExtract
-    STT --> EmbedModel --> Chroma
-    PDFExtract --> EmbedModel --> Chroma
-
-    QueryAPI --> RAGEngine
-    RAGEngine --> Chroma
-    RAGEngine -->|Local Mode| LocalLLM
-    RAGEngine -->|Cloud Mode| GeminiAPI
-    QueryAPI -->|Answer + Citations| Chat
-
-    Chat -.->|Click Timestamp Citation| VideoPlayer
-    Chat -.->|Click Page Citation| PdfView
-```
+<p align="center">
+  <img src="architecture.drawio.png" alt="System Architecture Diagram" width="100%" />
+</p>
 
 ---
 
@@ -109,6 +81,9 @@ flowchart TD
 │   │       └── PdfViewer.tsx    # PDF renderer with page-jump navigation
 │   ├── package.json             # Next.js 16 dependencies
 │   └── tsconfig.json            # TypeScript configuration
+├── architecture.drawio.png      # System architecture diagram
+├── architecture.drawio          # Editable Draw.io diagram source
+├── Multimodal_demo.mp4          # Complete project demo walkthrough
 ├── .gitignore                   # Ignores large binaries, models, databases, and node_modules
 ├── .env.example                 # Root environment variable documentation
 └── README.md                    # Project documentation
@@ -214,6 +189,13 @@ This project was built to showcase enterprise-grade RAG engineering:
 1. **Multimodal Ingestion**: Combining unstructured video audio streams with structured document pages.
 2. **Deep Linking / Grounded Verification**: Ensuring hallucination-free responses through bidirectional UI citations that link directly to ground-truth frames and pages.
 3. **Flexible LLM Runtime**: Seamless portability between on-premise local open-weights LLMs and cloud APIs.
+
+---
+
+## 🙏 Acknowledgments & Attributions
+
+- **Educational Video Material**: The sample video used in the demonstration is from the excellent tutorial [**"Learn Python in Only 30 Minutes (Beginner Tutorial)"**](https://www.youtube.com/watch?v=Ro_MScTDfU4) by [**Indently**](https://www.youtube.com/@Indently). We gratefully credit Indently for creating and sharing this educational resource.
+- **Speech-to-Text Model**: [Zero-STT Hinglish](https://huggingface.co/) and the high-performance C++ implementation by [whisper.cpp](https://github.com/ggerganov/whisper.cpp).
 
 ---
 
