@@ -46,6 +46,7 @@ backend/*_transcript.txt
 # Node / Frontend Build & Dependencies
 node_modules/
 frontend/node_modules/
+frontend/public/pdf.worker.min.mjs
 .next/
 frontend/.next/
 out/
