@@ -1,0 +1,83 @@
+# ==============================================================================
+# Multimodal RAG .gitignore
+# ==============================================================================
+
+# Large Media Files & Uploads
+*.mp4
+*.webm
+*.mkv
+*.avi
+*.mov
+*.wav
+*.mp3
+*.m4a
+*.pdf
+uploads/
+backend/uploads/
+!backend/uploads/.gitkeep
+
+# Model Binaries & Heavy Weights (directories & symlinks)
+models
+models/
+backend/models
+backend/models/
+*.bin
+*.gguf
+*.pt
+*.pth
+*.safetensors
+*.onnx
+
+# Whisper.cpp source and build directory (symlinked or cloned)
+whisper.cpp
+whisper.cpp/
+backend/speech2text/whisper.cpp
+backend/speech2text/whisper.cpp/
+
+# Vector Database & Temporary Transcripts
+chroma_db/
+backend/chroma_db/
+*.sqlite
+*.sqlite3
+*.db
+*_transcript.txt
+backend/*_transcript.txt
+
+# Node / Frontend Build & Dependencies
+node_modules/
+frontend/node_modules/
+.next/
+frontend/.next/
+out/
+dist/
+build/
+*.tsbuildinfo
+next-env.d.ts
+
+# Python Virtual Environments & Caches
+__pycache__/
+backend/__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+.pytest_cache/
+
+# Environment Variables & Secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+backend/.env
+
+# IDE & OS Artifacts
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
