@@ -14,11 +14,9 @@ The system provides precise, interactive citations: clicking a citation badge in
 
 ## 🎥 Live Demo
 
-Watch the complete multimodal pipeline in action — uploading a document, ingesting video, transcribing speech with millisecond timestamps, balanced ChromaDB retrieval, and interactive citations that seek the video player to the exact second:
+Watch the complete multimodal pipeline in action: uploading a document, ingesting video, transcribing speech with millisecond timestamps, balanced ChromaDB retrieval, and interactive citations that seek the video player to the exact second:
 
-https://github.com/dubeamit/Mulitmodal_poc/assets/Multimodal_demo.mp4
-
-> 💡 **Demo Recording**: [`Multimodal_demo.mp4`](Multimodal_demo.mp4) (Direct download / preview)
+> 💡 **Demo Recording**: [`Multimodal_demo.mp4`](Multimodal_demo.mp4)
 
 ---
 
@@ -40,7 +38,7 @@ https://github.com/dubeamit/Mulitmodal_poc/assets/Multimodal_demo.mp4
 
 - ⚡ **Dual LLM Architecture (Local & Cloud)**:
   - **Local Model**: Connects to OpenAI-compatible local inference engines (`llama.cpp server`, `Ollama`, or `vLLM`) for zero-cost, private, offline execution.
-  - **Cloud Model**: Instant one-click toggle to **Google Gemini** (Gemini 2.5 / Flash) for cloud-scale reasoning.
+  - **Cloud Model**: Instant one-click toggle to **Google Gemini** (Gemini 3.8 Flash) for cloud-scale reasoning.
 
 - 🎨 **Sleek Split-Pane Interface**:
   - Built with **Next.js 16**, **React 19**, and **Tailwind CSS**.
