@@ -16,9 +16,9 @@ The system provides precise, interactive citations: clicking a citation badge in
 
 Watch the complete multimodal pipeline in action: uploading a document, ingesting video, transcribing speech with millisecond timestamps, balanced ChromaDB retrieval, and interactive citations that seek the video player to the exact second:
 
-[![Watch Multimodal RAG Demo](demo_thumbnail.png)](Multimodal_demo.mp4)
+https://github.com/user-attachments/assets/53b286a9-31b3-4b03-af22-88797c155bd5
 
-> ▶️ **[Click here to watch the full demo video (`Multimodal_demo.mp4`)](Multimodal_demo.mp4)**
+> 💡 *Tip: If the embedded player above is not loading in your browser, you can also view or download [`Multimodal_demo.mp4`](Multimodal_demo.mp4) directly.*
 
 ---
 
