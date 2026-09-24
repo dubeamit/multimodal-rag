@@ -1,3 +1,7 @@
+
+
+https://github.com/user-attachments/assets/53b286a9-31b3-4b03-af22-88797c155bd5
+
 # Multimodal RAG: Video & Document Intelligence with Deep Temporal Citations
 
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688.svg?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
