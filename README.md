@@ -16,7 +16,9 @@ The system provides precise, interactive citations: clicking a citation badge in
 
 Watch the complete multimodal pipeline in action: uploading a document, ingesting video, transcribing speech with millisecond timestamps, balanced ChromaDB retrieval, and interactive citations that seek the video player to the exact second:
 
-> 💡 **Demo Recording**: [`Multimodal_demo.mp4`](Multimodal_demo.mp4)
+<video src="Multimodal_demo.mp4" controls width="100%">
+  Your browser does not support the video tag. <a href="Multimodal_demo.mp4">Download Demo Video</a>
+</video>
 
 ---
 

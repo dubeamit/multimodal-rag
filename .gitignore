@@ -83,3 +83,5 @@ backend/.env
 Thumbs.db
 *.swp
 *.swo
+*.bkp
+*.bak
